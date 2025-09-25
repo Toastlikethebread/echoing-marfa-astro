@@ -7,8 +7,6 @@ import cloudflare from "@astrojs/cloudflare";
 
 import icon from "astro-icon";
 
-import react from "@astrojs/react";
-
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +17,7 @@ export default defineConfig({
       // Include needed Icons
       'simple-icons': ['instagram', 'tiktok']
     }
-  }), react()],
+  })],
 
   adapter: cloudflare({
     platformProxy: {
