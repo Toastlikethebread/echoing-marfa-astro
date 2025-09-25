@@ -2,23 +2,42 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css'; // Import global styles
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
+
+//content
+import { Content } from '../content/MD text/How to help marfa.md';
+import SignPetition from "../components/PetitionButton.astro";
 import landingImage from '../content/images/MarfaBehindBars.jpg';
+
 ---
 <style>
 .landingDiv{
 	<---background-color: rgba(121, 113, 113, 0.747);--->
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 	width: calc(100% - 60px);
-	position: relative;
-	margin-right: 50px;
-	margin-left: 50px;
+	position: static;
+	margin: 0 auto;
 	padding: 5px;
+	max-width: 1800px;
+	object-position: 50%;
 }
 .column{
 	flex: 50%;
 }
-
+.social-links, .social-links a {
+	color: var(--black);
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+.social-links a:hover {
+	color: var(--accent);
+}
 </style>
 <!doctype html>
 <html lang="en">
@@ -30,20 +49,56 @@ import landingImage from '../content/images/MarfaBehindBars.jpg';
 		<main>
 			<div class="landingDiv">
 				<h1>Imprisoned for documenting injustice</h1>
-				<div style="display: flex; column-gap: 1em;">
-					<div class="column" style=" text-align: center;">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget suscipit urna, non vehicula sem. Pellentesque lacus enim, egestas id vestibulum at, dignissim et augue. Sed porttitor nisl ultrices, ultrices dui nec, fermentum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris pharetra blandit augue, vitae tincidunt ex vestibulum nec. Proin ac facilisis nunc, vel fermentum ipsum. Donec rutrum in diam vel blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam tempor nibh non dui cursus, et euismod velit vehicula. Nunc id vehicula magna.
+				<div style="align-items: center; column-gap: 1em; display: flex; flex-wrap: nowrap; justify-content: center; column-gap: 1em; position: static;">
+					<div class="column" style="text-align: center;">
+						<p>
+						Marfa Rabkova is a 29-year-old human rights activist from Belarus, currently serving a 14-year prison sentence for defending democracy, academic freedom, and the right to protest. Her “crime” was helping communities document election fraud and police brutality. Our campaign, Echoing Marfa, seeks to amplify her story, raise awareness, and mobilise solidarity with her and others imprisoned under Alexander Lukashenko’s authoritarian regime.					
+						</p>
 					</div>
 					<div class="column" style="max-width: 500px;">
 						<Image src={landingImage} alt="Marfa Rabkova pictured behind bars at her trial" layout='constrained' fit="contain" object-position="100%"></Image>
 					</div>
 				</div>
 			</div>
-			<div class="dividers" style="height: 100px; position: relative; width: 100vw; margin-left: -1em;">
-				Test
+			<div class="divider">
+				<script src="../scripts/vwFix.js"></script>
+				<div style="max-width: 1800px; margin: 0 auto; padding: 0 1em; text-align: center;">
+					<p style="padding: 0em;">
+						"Violence is violence, repressions are repressions, and war is war. There is no other way. I feel ashamed when educated people cover their eyes and ears, mute their moral sense, and do not question their own actions. How much bravery does it take not to do bad things?  How much courage does it take to act under human values within one’s sphere of influence?"
+					</p>
+					<p class="subtext" style="font-size: .8em; text-align: right; padding-right:0em;">
+						- Marfa Rabkova's final words in court before imprisonment
+					</p>
+				</div>
+			</div>
+			<div class="landingDiv" style="padding-top: 1em;">
+				<Content />
+				<div style="display:block; margin:1em 3em">
+					<SignPetition />
+				</div>
+				<div style="display:block; align-items: center; width: 50%; margin: 0 auto; position: relative;">
+					<div class="social-links">
+						<a href="https://www.instagram.com/echoingmarfa" target="_blank">
+							<span class="sr-only">Follow us on Instagram</span>
+								<Icon name="simple-icons:instagram" size={48}/>
+						</a>
+						<a href="https://www.tiktok.com/@echoing.marfa" target="_blank">
+							<span class="sr-only">Follow us on TikTok</span>
+								<Icon name="simple-icons:tiktok" size={48}/>
+						</a>
+						<a href="https://x.com/EchoingMarfa" target="_blank">
+							<span class="sr-only">Follow us on Twitter</span>
+							<svg viewBox="0 0 16 16" aria-hidden="true" width="48" height="48"
+								><path
+									fill="currentColor"
+									d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+								></path>
+							</svg>
+						</a>
+					</div>
+				</div>
 			</div>
 		</main>
 		<Footer />
 	</body>
-	
 </html>

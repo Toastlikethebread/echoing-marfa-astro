@@ -6,6 +6,8 @@
 
 
 :root {
+  --scrollbar: 0px;
+  /*Colours :)*/
   --accent: #d42828;
   --accent-dark: #d42828;;
   --black: 15, 18, 25;
@@ -16,6 +18,7 @@
   --box-shadow:
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
+    --button-size: 48;
 }
 @font-face {
   font-family: "Atkinson";
@@ -48,7 +51,7 @@ main {
   width: calc(100% - 2em);
   max-width: calc(100% - 2em);
   margin: auto;
-  padding: 3em 1em;
+  padding: 3em 0em;
 }
 h1,
 h2,
@@ -62,7 +65,6 @@ h6 {
 }
 h1 {
   font-size: 3.052em;
-  text-align: center;
 }
 h2 {
   font-size: 2.441em;
@@ -89,8 +91,19 @@ a:hover {
 p {
   margin-bottom: 1em;
 }
+ul {
+  display: inline-block;
+  text-align: left;
+  text-justify: auto;
+  width: 70%;
+  min-width: 60vw;
+}
 .prose p {
   margin-bottom: 2em;
+}
+.subtext p {
+  font-size: .5em;
+  position: sticky;
 }
 textarea {
   width: 100%;
@@ -129,10 +142,6 @@ hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
-.dividers {
-  background-color: rgb(var(--accent));
-  margin: 0px;
-}
 @media (max-width: 720px) {
   body {
     font-size: 18px;
@@ -159,3 +168,20 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+
+/* custom classes */
+.divider {
+  display: block;
+  background-color: var(--accent)!important;
+  margin:0;
+  padding:0;
+  padding-bottom: 1px;
+  margin-left: -1em;
+  height: auto; 
+  position: relative; 
+  width: 100vw; 
+  width: calc(100vw - var(--scrollbar));
+  color: rgb(var(--gray-light));
+  font-style: italic;
+  align-content: center;
+	}

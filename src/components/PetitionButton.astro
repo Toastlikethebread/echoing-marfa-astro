@@ -1,0 +1,94 @@
+---
+
+---
+
+<a href="https://chng.it/6PK7M7W5Hx" style="text-decoration: none;">
+<div class="container">
+  <button class="btn" >Sign our petition!</button>
+</div>
+
+</a>
+
+<style>
+/*Global btn styles*/
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  text-decoration: none!important;
+  background: transparent;
+  font-size: 2em;
+  border: none;
+}
+/*Container styles*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+/*Main button styles*/
+.btn {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 12.5em;
+  height: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  text-indent: 2em;
+  transition: 300ms;
+  font-weight: 600;
+}
+
+.btn::before {
+  content: "";
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  background-color: rgb(var(--black));
+  z-index: -1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: .8em;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 1em;
+  height: 1em;
+  border-top: .15em solid rgb(var(--gray-light));
+  border-right: .15em solid rgb(var(--gray-light));
+  transition: 400ms;
+}
+
+.btn:hover {
+  text-indent: 15px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.btn:active {
+  scale: 0.95;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn:hover::after {
+  left: calc(100% - 1.2em);
+  border-top-color: var(--accent);
+  border-right-color: var(--accent);
+}
+
+</style>
