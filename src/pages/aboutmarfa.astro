@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 //content
 import Layout from '../layouts/BasePage.astro';
 import { Content } from '../content/text/aboutMarfa.md';
-import landingImage from '../content/images/MarfaBehindBars.jpg';
+import marfaQuote from '../content/images/MarfaQuote.jpg';
 import Timeline from '../components/parallaxTimeline.astro';
 
 ---
@@ -15,7 +15,7 @@ import Timeline from '../components/parallaxTimeline.astro';
 <Layout title="Marfa's Story">
 	<div class="centredContent">
 		<Content />
-		<Image src={landingImage} alt="Marfa Rabkova pictured behind bars at her trial" layout='constrained' fit="contain" object-position="100%"></Image>
+		<Image src={marfaQuote} alt="Marfa Rabkova quoted: At the moment, my life is all black. I thought I’d reached the bottom. But I was wrong, it wasn’t the bottom. I don’t think that life can still surprise me with another hardship, because how can it be worse? " layout='constrained' fit="contain" object-position="100%"></Image>
 		<div>
 			<h2> A timeline of Marfa's fight against tyranny</h2>
 			<Timeline />

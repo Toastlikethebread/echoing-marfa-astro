@@ -10,7 +10,7 @@ import { Icon } from 'astro-icon/components'
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/aboutmarfa">Marfa's Story</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/furtherinfo">Further Information</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://www.instagram.com/echoingmarfa" target="_blank">
@@ -78,9 +78,17 @@ import { Icon } from 'astro-icon/components'
 	.social-links a:hover {
 		color: var(--accent);
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 760px) {
 		.social-links {
 			display: none;
+		}
+	}
+	@media (max-width: 500px) {
+		h2{
+			font-size: .8
+		}
+		.internal-links{
+			font-size: .7em
 		}
 	}
 </style>
