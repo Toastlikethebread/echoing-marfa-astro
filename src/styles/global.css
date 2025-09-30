@@ -9,7 +9,7 @@
   --scrollbar: 0px;
   /*Colours :)*/
   --accent: #b12424;
-  --accent-dark: #d42828;;
+  --accent-dark: #6d1414;;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -42,7 +42,6 @@ body {
   background: linear-gradient(var(--gray-gradient)) no-repeat;
   background-size: 100% 600px;
   word-wrap: break-word;
-  overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
   font-size: 20px;
   line-height: 1.7;
@@ -144,7 +143,7 @@ hr {
 }
 @media (max-width: 720px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   main {
     padding: 1em;
@@ -172,13 +171,13 @@ hr {
 /* custom classes */
 .divider {
   display: block;
-  background-color: var(--accent)!important;
+  background-color: var(--accent);
   margin:0;
   padding:0;
   padding-bottom: 1px;
   margin-left: -1em;
   height: auto; 
-  position: relative; 
+  position: static; 
   width: 100vw; 
   width: calc(100vw - var(--scrollbar));
   color: rgb(var(--gray-light));
