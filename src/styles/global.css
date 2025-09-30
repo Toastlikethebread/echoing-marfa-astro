@@ -7,6 +7,7 @@
 
 :root {
   --scrollbar: 0px;
+  --small-screen: 720px;
   /*Colours :)*/
   --accent: #b12424;
   --accent-dark: #6d1414;;
@@ -141,7 +142,7 @@ hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: var(--small-screen)) {
   body {
     font-size: 16px;
   }
@@ -169,6 +170,17 @@ hr {
 }
 
 /* custom classes */
+.centredContent{
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	width: calc(100% - 60px);
+	position: static;
+	margin: 0 auto;
+	padding: 5px;
+	max-width: 1800px;
+	object-position: 50%;
+}
 .divider {
   display: block;
   background-color: var(--accent);

@@ -9,10 +9,8 @@ import { Icon } from 'astro-icon/components'
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<!--
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/aboutmarfa">Marfa's Story</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
-			-->
 		</div>
 		<div class="social-links">
 			<a href="https://www.instagram.com/echoingmarfa" target="_blank">
@@ -44,6 +42,7 @@ import { Icon } from 'astro-icon/components'
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		position: sticky;
 		top: 0;
+		z-index: 9999;
 	}
 	h2 {
 		margin: 0;

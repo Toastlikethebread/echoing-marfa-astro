@@ -1,0 +1,25 @@
+---
+import '../styles/global.css'; // Import global styles
+import { Image } from 'astro:assets';
+
+//content
+import Layout from '../layouts/BasePage.astro';
+import { Content } from '../content/text/aboutMarfa.md';
+import landingImage from '../content/images/MarfaBehindBars.jpg';
+import Timeline from '../components/parallaxTimeline.astro';
+
+---
+<style>
+
+</style>
+<Layout title="Marfa's Story">
+	<div class="centredContent">
+		<Content />
+		<Image src={landingImage} alt="Marfa Rabkova pictured behind bars at her trial" layout='constrained' fit="contain" object-position="100%"></Image>
+		<div>
+			<h2> A timeline of Marfa's fight against tyranny</h2>
+			<Timeline />
+		</div>
+		<h2>What about her Future?</h2>
+	</div>
+</Layout>

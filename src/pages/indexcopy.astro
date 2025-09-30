@@ -1,14 +1,16 @@
 ---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css'; // Import global styles
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
 
 //content
-import { Content } from '../content/text/How to help marfa.md';
+import { Content } from '../content/MD text/How to help marfa.md';
 import SignPetition from "../components/PetitionButton.astro";
 import landingImage from '../content/images/MarfaBehindBars.jpg';
 import Layout from '../layouts/BasePage.astro';
-
 ---
 <style>
 @media only screen and (max-width: 720px) {
@@ -42,6 +44,17 @@ import Layout from '../layouts/BasePage.astro';
 	}
 
 }
+.landingDiv{
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	width: calc(100% - 60px);
+	position: static;
+	margin: 0 auto;
+	padding: 5px;
+	max-width: 1800px;
+	object-position: 50%;
+}
 .social-links, .social-links a {
 	color: var(--black);
 	display: flex;
@@ -53,7 +66,7 @@ import Layout from '../layouts/BasePage.astro';
 }
 </style>
 <Layout title={SITE_TITLE}>
-			<div class="centredContent">
+			<div class="landingDiv">
 				<h1>Imprisoned for documenting injustice</h1>
 				<div class="imgText">
 					<div class="column" style="text-align: center; grid-area: text;">
@@ -77,7 +90,7 @@ import Layout from '../layouts/BasePage.astro';
 					</p>
 				</div>
 			</div>
-			<div class="centredContent" style="padding-top: 1em;">
+			<div class="landingDiv" style="padding-top: 1em;">
 				<Content />
 				<div style="display:block; margin:1em 3em">
 					<SignPetition />
